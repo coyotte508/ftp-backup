@@ -6,15 +6,15 @@ Typical use case: OVH providing a backup server accessible through ftp from the 
 
 ##Requirements
 
-``bash
+```bash
 apt-get install lftp inotiy-tools
-``
+```
 
 ## Setup
 
 Edit `www-backup.sh` and `remove-ftp-old.sh` with ftp host/user/password information.
 
-``bash
+```bash
 #permissions
 chmod +x *.sh
 chmod +x www-backup
@@ -26,16 +26,16 @@ sudo mv remove-ftp-old.sh /usr/local/bin
 
 #register service on startup
 sudo update-rc.d service enable
-``
+```
 
 ## Command
 
-``bash
+```bash
 sudo service www-backup start/stop/status
-``
+```
 
 ## Debug
 
-``bash
-sudoo journalctl -u www-backup
-``
+```bash
+sudo journalctl -u www-backup
+```
